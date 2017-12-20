@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 #main-header {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   background-color: #fefefe;
   border-bottom: 1px solid #c2c2c2;
 }
@@ -24,7 +25,7 @@
   color: #fc8e2e;
 }
 
-#main-header .topbar-center-logo .menu li.is-active a {
+#main-header .topbar-center-logo .menu li:hover a {
   color: #fc8e2e;
   background: none;
 }
@@ -53,6 +54,35 @@
 
 #main-header .topbar-center-logo-mobile .menu-icon {
   vertical-align: text-top;
+}
+
+#main-footer {
+  background: #e6e6e6;
+  padding: 60px 0;
+  font-size: 12px;
+}
+
+#main-footer .footer-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  padding: 0 0 20px 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+#main-footer .footer-title.bordered {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+#main-footer .menu.vertical li a {
+  padding: 10px 0;
+  color: #636363;
+}
+
+#main-footer .menu.vertical li a:hover {
+  color: #fc8e2e;
 }
 
 /**
@@ -620,7 +650,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #636363;

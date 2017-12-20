@@ -2,6 +2,7 @@
     #header-logo {
         max-height: 40px;
     }
+    font-family: $header-font-family;
     background-color:$white;
     border-bottom: 1px solid #c2c2c2;
 
@@ -10,14 +11,14 @@
         padding-bottom: 22px;
         .menu {
         	li{
-        		a {
+        		a{
 	                color: $dark-gray;
 	                transition: all 0.3s ease-out;
 	                &:hover{
 	                	color: $primary-color;
 	                }
 	            }
-	            &.is-active{
+	            &:hover{
 	            	a{
 	            		color: $primary-color;
 	            		background:none;

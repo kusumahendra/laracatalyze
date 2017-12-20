@@ -13,7 +13,8 @@
         {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet"> --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-        <link rel="stylesheet" href="{{ asset('css/app.css')}} ">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"><link rel="stylesheet" href="{{ asset('css/app.css')}} ">
+
         @stack('header-scripts')
 
         <script>
