@@ -23,9 +23,10 @@
 
 #main-header .topbar-center-logo .menu li a:hover {
   color: #fc8e2e;
+  background: none;
 }
 
-#main-header .topbar-center-logo .menu li:hover a {
+#main-header .topbar-center-logo .menu li.is-active a {
   color: #fc8e2e;
   background: none;
 }

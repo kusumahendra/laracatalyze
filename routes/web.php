@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('pages.blank');
 });
+Route::prefix('/admin')->group(function() {
+
+	Route::get('/', function () {
+	    return view('pages.backend.dashboard');
+	})->name('backend.dashboard');
+	Route::resource('post', 'Backend\PostController');
+	Route::resource('categories', 'Backend\CateoryController');
+	Route::resource('user', 'Backend\UserController');
+});

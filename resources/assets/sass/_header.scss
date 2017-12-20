@@ -16,9 +16,10 @@
 	                transition: all 0.3s ease-out;
 	                &:hover{
 	                	color: $primary-color;
+	                	background:none;
 	                }
 	            }
-	            &:hover{
+	            &.is-active{
 	            	a{
 	            		color: $primary-color;
 	            		background:none;

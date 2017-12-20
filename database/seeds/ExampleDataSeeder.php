@@ -12,5 +12,7 @@ class ExampleDataSeeder extends Seeder
     public function run()
     {
         $this->call(UserExampleData::class);
+        $this->call(CategoriesExampleData::class);
+        $this->call(PostExampleData::class);
     }
 }
