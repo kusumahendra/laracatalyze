@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
 
 class UserController extends Controller
 {
@@ -14,7 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::paginate(env('PAGINATE', 10));
+        // dd(User::all());
+        return view('pages.backend.user.index', compact('users'));
     }
 
     /**

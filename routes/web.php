@@ -20,6 +20,6 @@ Route::prefix('/admin')->group(function() {
 	    return view('pages.backend.dashboard');
 	})->name('backend.dashboard');
 	Route::resource('post', 'Backend\PostController');
-	Route::resource('categories', 'Backend\CateoryController');
+	Route::resource('category', 'Backend\CategoryController');
 	Route::resource('user', 'Backend\UserController');
 });

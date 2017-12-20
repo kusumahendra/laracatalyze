@@ -1,39 +1,39 @@
 @extends('layout.backend.master')
 @section('content-title')
-    Posts
+    Categories
 @endsection
 
 @section('backend.content')
 <div class="content">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             @component('layout.backend._box')
                 {{-- @slot('bodyClass', 'no-padding') --}}
-                @slot('title', 'All Posts')
+                @slot('title', 'All Users')
                 {{-- @slot('footer', 'User Detail') --}}
                 @slot('boxTool')
-                    <a href="{{ url('admin/post/create') }}" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-plus"></i> Add new post</a>
+                    {{-- <a href="{{ url('admin/post/create') }}" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-plus"></i> Add new post</a> --}}
                 @endslot
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Title</th>
-                            <th>Date created</th>
-                            <th>Tools</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>tools</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($posts as $post)
+                        @foreach ($users as $user)
                             <tr>
-                                <td>{{ $post->id }}</td>
-                                <td>{{ $post->title }}</td>
-                                <td>{{ $post->created_at }}</td>
+                                <td>{{ $user->id }}</td>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
                                 <td>
-                                    <a href="{{ url('admin/post/'.$post->id.'/edit/') }}" class="btn btn-xs btn-default">
+                                    <a href="{{ url('admin/post/'.$user->id.'/edit/') }}" class="btn btn-xs btn-default">
                                         <i class="fa fa-pencil fa-fw"></i>
                                     </a>
-                                    <a href="{{ url('admin/post/'.$post->id.'/delete/') }}" class="btn btn-xs btn-danger">
+                                    <a href="{{ url('admin/post/'.$user->id.'/delete/') }}" class="btn btn-xs btn-danger">
                                         <i class="fa fa-trash fa-fw"></i>
                                     </a>
                                 </td>
@@ -42,7 +42,7 @@
                     </tbody>
                 </table>
                 @slot('footerClass' , 'text-right')
-                @slot('footer' , $posts->links())
+                @slot('footer' , $users->links())
             @endcomponent
         </div>
     </div>
