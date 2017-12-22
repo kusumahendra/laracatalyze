@@ -20,6 +20,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('admin.tag.index') }}">
+                        <i class="fa fa-tags"></i> <span>Tags</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('admin.user.index') }}">
                         <i class="fa fa-user"></i> <span>User</span>
                     </a>

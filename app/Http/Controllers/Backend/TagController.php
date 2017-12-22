@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Models\Tag;
 
-class CategoryController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(env('PAGINATE', 10));
-        return view('pages.backend.category.index', compact('categories'));
+        $tags = Tag::paginate(env('PAGINATE', 10));
+        return view('pages.backend.tag.index', compact('tags'));
     }
 
     /**
@@ -37,11 +37,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category = Category::create([
+        $tag = Tag::create([
             'name' => $request->name,
         ]);
-        return redirect()->route('admin.category.index')
-                         ->with('success-message', 'New category has been added.');
+        return redirect()->route('admin.tag.index')
+                         ->with('success-message', 'New tag has been added.');
     }
 
     /**
@@ -75,15 +75,15 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = Category::find($id);
-        $category->name = $request->name;
-        $category->slug = '';
-        $category->save();
+        $tag = Tag::find($id);
+        $tag->name = $request->name;
+        $tag->slug = '';
+        $tag->save();
         return redirect()
-                ->route('admin.category.index', [
+                ->route('admin.tag.index', [
                     'page' => $request->page ?? 1
                 ])
-                ->with('success-message', 'Category has been updated.');
+                ->with('success-message', 'Tag has been updated.');
     }
 
     /**

@@ -23,6 +23,7 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Backend'], 
 	})->name('dashboard');
 	Route::resource('post', 'PostController');
 	Route::resource('category', 'CategoryController');
+	Route::resource('tag', 'TagController');
 	Route::resource('user', 'UserController');
 });
 
