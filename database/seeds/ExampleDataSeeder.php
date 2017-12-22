@@ -14,5 +14,6 @@ class ExampleDataSeeder extends Seeder
         $this->call(UserExampleData::class);
         $this->call(CategoriesExampleData::class);
         $this->call(PostExampleData::class);
+        $this->call(TagExampleData::class);
     }
 }

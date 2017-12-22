@@ -13,7 +13,8 @@
         {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet"> --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"><link rel="stylesheet" href="{{ asset('css/app.css')}} ">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+        <link rel="stylesheet" href="{{ asset('css/app.css')}} ">
 
         @stack('header-scripts')
 
@@ -24,11 +25,11 @@
         </script>
     </head>
     <body>
-        @include('layouts.frontend._header')
+        @include('layout.frontend._header')
         <div id="content-container">
             @yield('content')
         </div>
-		@include('layouts.frontend._footer')
+		@include('layout.frontend._footer')
         {{-- <script src="{{ asset('js/foundation.js')}} "></script> --}}
         <script src="{{ asset('js/app.js')}} "></script>
         @stack('footer-scripts')

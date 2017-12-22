@@ -12,7 +12,7 @@
                 @slot('title', 'All Posts')
                 {{-- @slot('footer', 'User Detail') --}}
                 @slot('boxTool')
-                    <a href="{{ url('admin/post/create') }}" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-plus"></i> Add new post</a>
+                    <a href="{{ route('admin.post.create') }}" class="btn btn-primary btn-xs"><i class="fa fa-fw fa-plus"></i> Add new post</a>
                 @endslot
                 <table class="table table-striped">
                     <thead>
@@ -30,12 +30,10 @@
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->created_at }}</td>
                                 <td>
-                                    <a href="{{ url('admin/post/'.$post->id.'/edit/') }}" class="btn btn-xs btn-default">
+                                    <a href="{{ route('admin.post.edit', $post) }}" class="btn btn-xs btn-default">
                                         <i class="fa fa-pencil fa-fw"></i>
                                     </a>
-                                    <a href="{{ url('admin/post/'.$post->id.'/delete/') }}" class="btn btn-xs btn-danger">
-                                        <i class="fa fa-trash fa-fw"></i>
-                                    </a>
+                                    <a href="{{ route('admin.post.destroy', $post) }}" class="btn btn-xs btn-danger" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash fa-fw"></i></a>
                                 </td>
                             </tr>
                         @endforeach

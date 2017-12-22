@@ -17,6 +17,18 @@ class CategoriesExampleData extends Seeder
      	Category::create([
      		'name' => 'categories 2'
      	]);
+     	Category::create([
+     		'name' => 'categories 3'
+     	]);
+     	Category::create([
+     		'name' => 'categories 4'
+     	]);
+     	Category::create([
+     		'name' => 'categories 5'
+     	]);
+     	Category::create([
+     		'name' => 'categories 6'
+     	]);
 
     }
 }

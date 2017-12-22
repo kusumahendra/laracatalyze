@@ -30,12 +30,10 @@
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>
-                                    <a href="{{ url('admin/post/'.$user->id.'/edit/') }}" class="btn btn-xs btn-default">
+                                     <a href="{{ route('admin.user.edit', $user) }}" class="btn btn-xs btn-default">
                                         <i class="fa fa-pencil fa-fw"></i>
                                     </a>
-                                    <a href="{{ url('admin/post/'.$user->id.'/delete/') }}" class="btn btn-xs btn-danger">
-                                        <i class="fa fa-trash fa-fw"></i>
-                                    </a>
+                                    <a href="{{ route('admin.user.destroy', $user) }}" class="btn btn-xs btn-danger" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash fa-fw"></i></a>
                                 </td>
                             </tr>
                         @endforeach

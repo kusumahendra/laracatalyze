@@ -10,16 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::loginUsingId(1);
 
 Route::get('/', function () {
     return view('pages.blank');
 });
-Route::prefix('/admin')->group(function() {
+// Route::prefix('/admin')->group(function() {
+Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Backend'], function () {
 
 	Route::get('/', function () {
 	    return view('pages.backend.dashboard');
-	})->name('backend.dashboard');
-	Route::resource('post', 'Backend\PostController');
-	Route::resource('category', 'Backend\CategoryController');
-	Route::resource('user', 'Backend\UserController');
+	})->name('dashboard');
+	Route::resource('post', 'PostController');
+	Route::resource('category', 'CategoryController');
+	Route::resource('user', 'UserController');
 });
+
+Route::get('post/{slug}', 'Frontend\PostController@show');

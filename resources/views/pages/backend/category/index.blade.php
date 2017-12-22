@@ -30,12 +30,10 @@
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->slug }}</td>
                                 <td>
-                                    <a href="{{ url('admin/post/'.$category->id.'/edit/') }}" class="btn btn-xs btn-default">
+                                    <a href="{{ route('admin.category.edit', $category) }}" class="btn btn-xs btn-default">
                                         <i class="fa fa-pencil fa-fw"></i>
                                     </a>
-                                    <a href="{{ url('admin/post/'.$category->id.'/delete/') }}" class="btn btn-xs btn-danger">
-                                        <i class="fa fa-trash fa-fw"></i>
-                                    </a>
+                                    <a href="{{ route('admin.category.destroy', $category) }}" class="btn btn-xs btn-danger" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash fa-fw"></i></a>
                                 </td>
                             </tr>
                         @endforeach

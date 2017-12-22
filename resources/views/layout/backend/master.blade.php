@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Laracatalyze - @yield('content-title')</title>
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
         <link rel="stylesheet" href="{{ asset('assets/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
@@ -42,6 +42,7 @@
             @include('layout.backend._sidebar')
 
             <div class="content-wrapper">
+                {{-- @include('layout.backend._alert') --}}
                 <section class="content-header">
                     <h1>
                         @yield('content-title')
@@ -55,17 +56,25 @@
 
             @include('layout.backend._footer')
         </div>
-
+        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
         <script src="{{ asset('assets/adminlte/bower_components/jquery/dist/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('assets/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
         <script src="{{ asset('assets/adminlte/bower_components/fastclick/lib/fastclick.js') }}"></script>
         <script src="{{ asset('assets/adminlte/dist/js/adminlte.min.js') }}"></script>
-
+        <script src="{{ asset('js/admin.js') }}"></scrip
         <script src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>
 
         @stack('footer-scripts')
-
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="{{ asset('js/common.js') }}"></script>
+        @if (session('success-message'))
+            <script>
+                swal("{{ session('success-message') }}", "" , "success");
+            </script>
+        @endif
+        <script>
+
+        </script>
     </body>
 </html>
