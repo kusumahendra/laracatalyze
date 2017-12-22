@@ -171,6 +171,79 @@
   margin-right: 20px;
 }
 
+#post-container .share .share-button {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 5px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+#post-container .share .share-button .fa {
+  line-height: 50px;
+  height: 1.28571429em;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+#post-container .share .share-button:hover {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+#post-container .share .facebook {
+  color: #3b5998;
+  border: solid 2px #3b5998;
+  border-radius: 50%;
+}
+
+#post-container .share .facebook .fa-circle {
+  color: #FFF;
+}
+
+#post-container .share .twitter {
+  color: #1DA1F2;
+  border: solid 2px #1DA1F2;
+  border-radius: 50%;
+}
+
+#post-container .share .twitter .fa-circle {
+  color: #FFF;
+}
+
+#post-container .share .gplus {
+  color: #DB4437;
+  border: solid 2px #DB4437;
+  border-radius: 50%;
+}
+
+#post-container .share .gplus .fa-circle {
+  color: #FFF;
+}
+
+#post-container .share .email {
+  color: #636363;
+  border: solid 2px #636363;
+  border-radius: 50%;
+}
+
+#post-container .share .email .fa-circle {
+  color: #FFF;
+}
+
+#post-container .share .rss {
+  color: #fc8e2e;
+  border: solid 2px #fc8e2e;
+  border-radius: 50%;
+}
+
+#post-container .share .rss .fa-circle {
+  color: #FFF;
+}
+
 #post-container .author {
   padding: 40px 0;
   font-size: 14px;

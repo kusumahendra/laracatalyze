@@ -20,16 +20,16 @@
 				<nav aria-label="You are here:" role="navigation">
 				  <ul class="breadcrumbs">
 				    <li><a href="#">{{ $post->user->name }}</a></li>
-				    <li><a href="#">{{ Carbon\Carbon::parse($post->created_at)->format('d m Y') }}</a></li>
+				    <li><a href="#">{{ Carbon\Carbon::parse($post->created_at)->format('d F Y') }}</a></li>
 				    <li><a href="#">{{ $post->user->company }}</a></li>
 				  </ul>
 				</nav>
 				<div class="tags">
 					<p>
-					<span class="tag title">Topics</span>
-					@foreach ($post->tags as $tag)
-					<a href="#" class="tag">{{ $tag->name }}</a>
-					@endforeach
+						<span class="tag title">Topics</span>
+						@foreach ($post->tags as $tag)
+							<a href="#" class="tag">{{ $tag->name }}</a>
+						@endforeach
 					</p>
 				</div>
 				<div class="excerpt">
@@ -40,18 +40,21 @@
 				</div>
 				<div class="share">
 					<p><span class="text">Share on</span>
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle-thin fa-stack-2x"></i>
-							<i class="fa fa-twitter fa-stack-1x"></i>
-						</span>
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle-thin fa-stack-2x"></i>
-							<i class="fa fa-twitter fa-stack-1x"></i>
-						</span>
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle-thin fa-stack-2x"></i>
-							<i class="fa fa-twitter fa-stack-1x"></i>
-						</span>
+						<a class="share-button facebook">
+							<i class="fa fa-facebook fa-fw fa-lg"></i>
+						</a>
+						<a class="share-button twitter">
+							<i class="fa fa-twitter fa-fw fa-lg"></i>
+						</a>
+						<a class="share-button gplus">
+							<i class="fa fa-google fa-fw fa-lg"></i>
+						</a>
+						<a class="share-button email">
+							<i class="fa fa-envelope fa-fw fa-lg"></i>
+						</a>
+						<a class="share-button rss">
+							<i class="fa fa-rss fa-fw fa-lg"></i>
+						</a>
 					</p>
 				</div>
 				<div class="grid-x grid-padding-x author">

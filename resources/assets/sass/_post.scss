@@ -70,6 +70,68 @@
 			font-weight:900;
 			text-transform: uppercase;
 		}
+		.share-button{
+			text-align:center;
+			width: 50px;
+		    height: 50px;
+		    vertical-align: middle;
+		    display:inline-block;
+			margin: 0 5px;
+			transition: all 0.3s ease-out;
+			.fa{
+				line-height: 50px;
+				height : 1.28571429em;
+				transition: all 0.3s ease-out;
+			}
+			&:hover{
+				.fa{
+					// -webkit-transform: rotate(-90deg);
+					// transform        : rotate(-90deg);
+				}
+				-webkit-transform: rotate(-360deg);
+				transform        : rotate(-360deg);
+			}
+		}
+		.facebook{
+			color:#3b5998;
+			border: solid 2px #3b5998;
+			border-radius: 50%;
+			.fa-circle{
+				color:#FFF;
+			}
+		}
+		.twitter{
+			color:#1DA1F2;
+			border: solid 2px #1DA1F2;
+			border-radius: 50%;
+			.fa-circle{
+				color:#FFF;
+			}
+		}
+		.gplus{
+			color:#DB4437;
+			border: solid 2px #DB4437;
+			border-radius: 50%;
+			.fa-circle{
+				color:#FFF;
+			}
+		}
+		.email{
+			color:$dark-gray;
+			border: solid 2px $dark-gray;
+			border-radius: 50%;
+			.fa-circle{
+				color:#FFF;
+			}
+		}
+		.rss{
+			color:$primary-color;
+			border: solid 2px $primary-color;
+			border-radius: 50%;
+			.fa-circle{
+				color:#FFF;
+			}
+		}
 	}
 	.author{
 		padding: 40px 0;
