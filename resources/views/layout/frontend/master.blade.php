@@ -32,6 +32,11 @@
 		@include('layout.frontend._footer')
         {{-- <script src="{{ asset('js/foundation.js')}} "></script> --}}
         <script src="{{ asset('js/app.js')}} "></script>
+        <script>
+            $(function(){
+                $(document).foundation();
+            })
+        </script>
         @stack('footer-scripts')
     </body>
 </html>

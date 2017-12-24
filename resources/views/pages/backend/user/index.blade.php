@@ -1,12 +1,12 @@
 @extends('layout.backend.master')
 @section('content-title')
-    Categories
+    Users
 @endsection
 
 @section('backend.content')
 <div class="content">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             @component('layout.backend._box')
                 {{-- @slot('bodyClass', 'no-padding') --}}
                 @slot('title', 'All Users')
@@ -20,6 +20,9 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Company</th>
+                            <th>Position</th>
+                            <th>Total Post</th>
                             <th>tools</th>
                         </tr>
                     </thead>
@@ -29,11 +32,14 @@
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
+                                <td>{{ $user->company }}</td>
+                                <td>{{ $user->position }}</td>
+                                <td>{{ $user->posts->count() }}</td>
                                 <td>
                                      <a href="{{ route('admin.user.edit', $user) }}" class="btn btn-xs btn-default">
                                         <i class="fa fa-pencil fa-fw"></i>
                                     </a>
-                                    <a href="{{ route('admin.user.destroy', $user) }}" class="btn btn-xs btn-danger" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash fa-fw"></i></a>
+                                    <a href="{{ route('admin.user.destroy', $user) }}" class="btn btn-xs btn-danger" data-method="delete" data-confirm="Are you sure?" data-post-count="{{ $user->posts->count() }}"><i class="fa fa-trash fa-fw"></i></a>
                                 </td>
                             </tr>
                         @endforeach

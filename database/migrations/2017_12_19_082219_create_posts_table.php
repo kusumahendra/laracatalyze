@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->text('excerpt');
             $table->longtext('content');
             $table->string('featured_image');
+            $table->boolean('is_featured')->default(0);
             $table->timestamps();
         });
     }

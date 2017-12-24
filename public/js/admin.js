@@ -15,24 +15,30 @@
             var link = $(this);
             var httpMethod = link.data('method').toUpperCase();
             var form;
-
-            // If the data-method attribute is not PUT or DELETE,
-            // then we don't know what to do. Just ignore.
-            if ($.inArray(httpMethod, ['PUT', 'DELETE']) === -1) {
-                return;
+            var postCount = link.data('post-count');
+            if(postCount > 0){
+              alert("This item can't be deleted because it's still have post");
+              e.preventDefault();
             }
+            else{
+              // If the data-method attribute is not PUT or DELETE,
+              // then we don't know what to do. Just ignore.
+              if ($.inArray(httpMethod, ['PUT', 'DELETE']) === -1) {
+                  return;
+              }
 
-            // Allow user to optionally provide data-confirm="Are you sure?"
-            if (link.data('confirm')) {
-                if (!laravel.verifyConfirm(link)) {
-                    return false;
-                }
+              // Allow user to optionally provide data-confirm="Are you sure?"
+              if (link.data('confirm')) {
+                  if (!laravel.verifyConfirm(link)) {
+                      return false;
+                  }
+              }
+
+              form = laravel.createForm(link);
+              form.submit();
+
+              e.preventDefault();
             }
-
-            form = laravel.createForm(link);
-            form.submit();
-
-            e.preventDefault();
         },
 
         verifyConfirm: function(link) {

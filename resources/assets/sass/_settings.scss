@@ -67,8 +67,9 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-font-size: 15px;
+// $global-width: rem-calc(1200);
+$global-width: 1080px;
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #fc8e2e,
@@ -83,7 +84,7 @@ $dark-gray: #636363;
 $darker-gray: #252525;
 $black: #0a0a0a;
 $white: #fefefe;
-$body-background: $white;
+$body-background: #FFFFFF;
 $body-font-color: $dark-gray;
 $body-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
@@ -134,7 +135,8 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$header-font-weight: $global-weight-normal;
+// $header-font-weight: $global-weight-normal;
+$header-font-weight: bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: $darker-gray;
@@ -827,8 +829,8 @@ $titlebar-background: $black;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color: $primary-color;
+$titlebar-icon-color-hover: $dark-gray;
 $titlebar-icon-spacing: 0.25rem;
 
 // 54. Tooltip
@@ -850,7 +852,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $white;
+$topbar-background: $body-background;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;

@@ -6,7 +6,7 @@
 @section('backend.content')
 <div class="content">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             @component('layout.backend._box')
                 {{-- @slot('bodyClass', 'no-padding') --}}
                 @slot('title', 'All Categories')
@@ -19,8 +19,9 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>slug</th>
-                            <th>tools</th>
+                            <th>Slug</th>
+                            <th>Total posts</th>
+                            <th>Tools</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,11 +30,12 @@
                                 <td>{{ $category->id }}</td>
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->slug }}</td>
+                                <td>{{ $category->posts->count() }}</td>
                                 <td>
                                     <a href="#" data-id="{{ $category->id }}" data-name="{{ $category->name }}" class="button-edit btn btn-xs btn-default">
                                         <i class="fa fa-pencil fa-fw"></i>
                                     </a>
-                                    <a href="{{ route('admin.category.destroy', $category) }}" class="btn btn-xs btn-danger" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash fa-fw"></i></a>
+                                    <a href="{{ route('admin.category.destroy', $category) }}" class="btn btn-xs btn-danger" data-method="delete" data-confirm="Are you sure?" data-post-count="{{ $category->posts->count() }}"><i class="fa fa-trash fa-fw"></i></a>
                                 </td>
                             </tr>
                         @endforeach
@@ -43,7 +45,7 @@
                 @slot('footer' , $categories->links())
             @endcomponent
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <form id="create-form" method="post" action="{{ route('admin.category.store') }}">
                 {{ csrf_field() }}
                 @component('layout.backend._box')
@@ -87,8 +89,9 @@
                 id = $(this).data('id');
                 name = $(this).data('name');
                 url = "{{ route('admin.category.index') }}/"+id;
+
                 $('#edit-form').attr('action', url);
-                $('#edit-form .box-title').html('Edit tag: '+name);
+                $('#edit-form .box-title').html('Edit category: '+name);
                 $('#edit-form input[name="name"]').val(name);
                 $('#edit-form input[name="id"]').val(id);
                 $('#create-form').addClass('hide');

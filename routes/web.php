@@ -12,8 +12,12 @@
 */
 Auth::loginUsingId(1);
 
-Route::get('/', function () {
-    return view('pages.blank');
+// Route::get('/', function () {
+//     return view('pages.blank');
+// });
+Route::group(['as' => 'frontend.', 'namespace' => 'Frontend'], function () {
+	Route::get('/', 'PageController@home');
+	Route::get('post/{slug}', 'PostController@show')->name('post');
 });
 // Route::prefix('/admin')->group(function() {
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Backend'], function () {
@@ -27,4 +31,3 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Backend'], 
 	Route::resource('user', 'UserController');
 });
 
-Route::get('post/{slug}', 'Frontend\PostController@show');

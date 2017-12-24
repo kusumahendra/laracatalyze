@@ -17,7 +17,7 @@ class Category extends Model
 	];
 
 	public function posts(){
-		return $this->hasMany(Posts::class, 'parent_id');
+		return $this->hasMany(Post::class, 'category_id');
 	}
 
 	public function sluggable()

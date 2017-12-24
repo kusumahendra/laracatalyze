@@ -19,6 +19,8 @@
                         <tr>
                             <th>ID</th>
                             <th>Title</th>
+                            <th>Category</th>
+                            <th>Tags</th>
                             <th>Date created</th>
                             <th>Tools</th>
                         </tr>
@@ -28,7 +30,13 @@
                             <tr>
                                 <td>{{ $post->id }}</td>
                                 <td>{{ $post->title }}</td>
-                                <td>{{ $post->created_at }}</td>
+                                <td>{{ $post->category->name }}</td>
+                                <td>
+                                    @foreach ($post->tags as $tag)
+                                        {{ $tag->name }},
+                                    @endforeach
+                                </td>
+                                <td>{{ Carbon\Carbon::parse($post->created_at)->format('d F Y H:i')  }}</td>
                                 <td>
                                     <a href="{{ route('admin.post.edit', $post) }}" class="btn btn-xs btn-default">
                                         <i class="fa fa-pencil fa-fw"></i>

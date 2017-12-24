@@ -83,7 +83,7 @@ class TagController extends Controller
                 ->route('admin.tag.index', [
                     'page' => $request->page ?? 1
                 ])
-                ->with('success-message', 'Tag has been updated.');
+                ->with('success-message', 'A tag has been updated.');
     }
 
     /**
@@ -94,6 +94,9 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tag = Tag::find($id);
+        $tag->delete();
+        return redirect()->route('admin.tag.index')
+                         ->with('success-message', 'A tag has been deleted.');
     }
 }

@@ -62,7 +62,7 @@
         <script src="{{ asset('assets/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
         <script src="{{ asset('assets/adminlte/bower_components/fastclick/lib/fastclick.js') }}"></script>
         <script src="{{ asset('assets/adminlte/dist/js/adminlte.min.js') }}"></script>
-        <script src="{{ asset('js/admin.js') }}"></scrip
+        <script src="{{ asset('js/admin.js') }}"></script>
         <script src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>
 
         @stack('footer-scripts')
@@ -71,6 +71,7 @@
         @if (session('success-message'))
             <script>
                 swal("{{ session('success-message') }}", "" , "success");
+
             </script>
         @endif
         <script>

@@ -83,7 +83,7 @@ class CategoryController extends Controller
                 ->route('admin.category.index', [
                     'page' => $request->page ?? 1
                 ])
-                ->with('success-message', 'Category has been updated.');
+                ->with('success-message', 'A category has been updated.');
     }
 
     /**
@@ -94,6 +94,9 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::find($id);
+        $category->delete();
+        return redirect()->route('admin.category.index')
+                         ->with('success-message', 'A category has been deleted.');
     }
 }

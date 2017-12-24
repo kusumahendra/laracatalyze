@@ -6,7 +6,7 @@
 @section('backend.content')
 <div class="content">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             @component('layout.backend._box')
                 @slot('title', 'All Tags')
                 @slot('boxTool')
@@ -16,8 +16,9 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>slug</th>
-                            <th>tools</th>
+                            <th>Slug</th>
+                            <th>Total post</th>
+                            <th>Tools</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,11 +27,12 @@
                                 <td>{{ $tag->id }}</td>
                                 <td>{{ $tag->name }}</td>
                                 <td>{{ $tag->slug }}</td>
+                                <td>{{ $tag->posts->count() }}</td>
                                 <td>
                                     <a href="#" data-id="{{ $tag->id }}" data-name="{{ $tag->name }}" class="button-edit btn btn-xs btn-default">
                                         <i class="fa fa-pencil fa-fw"></i>
                                     </a>
-                                    <a href="{{ route('admin.category.destroy', $tag) }}" class="btn btn-xs btn-danger" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash fa-fw"></i></a>
+                                    <a href="{{ route('admin.tag.destroy', $tag) }}" class="btn btn-xs btn-danger" data-method="delete" data-confirm="Are you sure?" data-post-count="{{ $tag->posts->count() }}"><i class="fa fa-trash fa-fw"></i></a>
                                 </td>
                             </tr>
                         @endforeach
@@ -40,7 +42,7 @@
                 @slot('footer' , $tags->links())
             @endcomponent
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <form id="create-form" method="post" action="{{ route('admin.tag.store') }}">
                 {{ csrf_field() }}
                 @component('layout.backend._box')
