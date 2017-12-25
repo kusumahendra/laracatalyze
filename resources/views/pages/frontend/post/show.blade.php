@@ -1,6 +1,7 @@
 @extends('layout.frontend.master')
 
 @section('title')
+	Catalyze - {{ $post->title }}
 @endsection
 
 @section('content')

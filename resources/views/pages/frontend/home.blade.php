@@ -1,6 +1,7 @@
 @extends('layout.frontend.master')
 
 @section('title')
+	Catalyze - Home
 @endsection
 
 @section('content')
@@ -123,19 +124,32 @@
 		<div class="grid-container">
 			<div class="grid-x grid-margin-x">
 				<div class="cell medium-4">
-					<div class="fb-page" data-href="https://www.facebook.com/WWF/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/WWF/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/WWF/">WWF</a></blockquote></div>
-					{{-- <div class="facebook">
-						<div class="facebook-header">
-							<h3>Catalyze</h3>
-							<p class="likes">6951 Likes</p>
-							<a href="" class="button button-hollow">Like <i class="fa fa-facebook"></i></a>
-						</div>
-					</div> --}}
+					<div class="facebook">
+						<div class="fb-page" data-href="https://www.facebook.com/WWF/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/WWF/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/WWF/">WWF</a></blockquote></div>
+					</div>
 				</div>
 				<div class="cell medium-4">
-					<a class="twitter-timeline" href="https://twitter.com/catalyzecomms?ref_src=twsrc%5Etfw" data-height="500" >Tweets by catalyzecomms</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<div class="twitter">
+						<a class="twitter-timeline" href="https://twitter.com/catalyzecomms?ref_src=twsrc%5Etfw" data-height="500" >Tweets by catalyzecomms</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
 				</div>
-				<div class="cell medium-4"></div>
+				<div class="cell medium-4">
+					<div class="instagram">
+						<div class="instagram-header">
+							<h3><i class="fa fa-lg fa-instagram"></i> Catalyze</h3>
+							<a href="" class="button hollow small follow">Follow</a>
+						</div>
+						<div class="instagram-content" id="content">
+							<div class="grid-x">
+								@for ($i = 0; $i < 10 ; $i++)
+									<div class="cell small-6">
+										<img src="https://placeimg.com/480/480/any" alt="">
+									</div>
+								@endfor
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

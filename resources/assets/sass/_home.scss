@@ -26,6 +26,7 @@
 			background-size: cover;
 			position:relative;
 			transition: all 0.3s ease-out;
+
 			.post-detail{
 				position:absolute;
 				bottom:0;
@@ -48,7 +49,7 @@
 			}
 			&:hover{
 				.post-detail{
-					background: linear-gradient(to top, rgba(0,0,0,0.9) , rgba(0,0,0,0));
+					padding-top:50px!important;
 				}
 			}
 		}
@@ -173,15 +174,54 @@
 		padding-top:40px;
 		padding-bottom:40px;
 		border-top:$border;
+		@include breakpoint(small only){
+			.cell{
+			margin-bottom: 20px;
+			margin-top: 20px;
+			}
+		}
 		.facebook{
 			border: $border;
-			.facebook-header{
-				background: #EEEEEE;
-				height: 170px;
-				padding: 20px;
-				h3{
-					font-family: $header-font-family;
-					font-size: 24px;
+			// .facebook-header{
+			// 	background: #EEEEEE;
+			// 	height: 170px;
+			// 	padding: 20px;
+			// 	h3{
+			// 		font-family: $header-font-family;
+			// 		font-size: 24px;
+			// 	}
+			// }
+		}
+		.twitter{
+			border: $border;
+		}
+		.instagram{
+			border: $border;
+			.follow{
+				float:right;
+				color: $darker-gray;
+				font-family: $header-font-family;
+				border-color: $light-gray;
+				font-weight:bold;
+			}
+			h3{
+				font-size: 24px;
+				margin: 0;
+				display:inline-block;
+			}
+			.instagram-header{
+				border-bottom: $border;
+				padding: 20px 10px;
+			}
+			.instagram-content{
+				max-height: 428px;
+				overflow-y: scroll;
+				.grid-x{
+					margin: 5px;
+				}
+				.cell{
+					width: calc(50% - 10px);
+					margin: 5px;
 				}
 			}
 		}

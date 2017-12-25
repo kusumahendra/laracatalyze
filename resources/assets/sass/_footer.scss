@@ -29,4 +29,21 @@
 			}
 		}
 	}
+	.contact-form{
+		input[type="text"]{
+			font-size:14px;
+			margin-bottom:0;
+			height:50px;
+		}
+		input[type="submit"]{
+			font-family: $header-font-family;
+			text-transform: uppercase;
+			font-weight: bold;
+			background-color: $darker-gray;
+		}
+	}
+	@include breakpoint(small only){
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
 }

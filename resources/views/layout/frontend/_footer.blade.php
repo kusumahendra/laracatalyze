@@ -34,6 +34,15 @@
 			<div class="cell medium-6 large-5">
 				<h4 class="footer-title">Contact Us</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iste, cumque eaque inventore vero amet! Harum magnam, ipsum facere, quidem quaerat facilis asperiores alias numquam praesentium labore iste veniam non.</p>
+				<div class="contact-form">
+					<input type="text" class="" placeholder="Message">
+					<div class="input-group">
+						<input class="input-group-field" type="text" placeholder="Your email address">
+						<div class="input-group-button">
+							<input type="submit" class="button" value="Submit">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
