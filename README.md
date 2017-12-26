@@ -12,19 +12,23 @@ Basic CMS to do blogging stuff for Catalyze. Feature including Categories, Tags,
 2. Prepare your database detail and create new database
 3. rename file .env.example to .env
 4. change detail in .enf file according to your DB connection detail
-	DB_CONNECTION=mysql
-	DB_HOST=127.0.0.1
-	DB_PORT=3307
-	DB_DATABASE=laracatalyze
-	DB_USERNAME=root
-	DB_PASSWORD=pass
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3307
+DB_DATABASE=laracatalyze
+DB_USERNAME=root
+DB_PASSWORD=pass
+```
 5. open terminal, go to project directory and run this command to migrate the DB
-	$ php artisan lara:rebuild
+```
+$ php artisan lara:rebuild
+```
 6. enter 'y' or 'n' in every question on migrate process (all 'y' is recommended)
 7. your apps is ready to use
 
-## notes
+## Important Notes
 * admin section can be accessed under /admin
 * a full sample for post detail can be accessed at /post/lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-do-eiusmod-tempor
-* CK editor is used as WYSIWYG editor
+* CKeditor is used as WYSIWYG editor
 * on uploading image window, you need to change the view option from grid to list to able to select image. (this is a bug, will fix it soon)
