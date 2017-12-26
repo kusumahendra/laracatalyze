@@ -129,7 +129,7 @@
 }
 
 @media screen and (max-width: 39.9375em) {
-  #main-footer {
+  #main-footer .cell {
     margin-bottom: 20px;
     margin-top: 20px;
   }

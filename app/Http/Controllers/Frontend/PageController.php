@@ -8,9 +8,9 @@ use App\Models\Post;
 class PageController extends Controller
 {
 	public function home(){
-		$featuredPosts = Post::where('is_featured', 1)->orderBy('created_at', 'desc')->take(3)->get()->values();
+		$featuredPosts = Post::where('is_featured', 1)->orderBy('id', 'desc')->take(3)->get()->values();
 		$featuredPostsId = $featuredPosts->pluck('id')->toArray();
-		$posts = Post::orderBy('created_at', 'desc')->get()->except($featuredPostsId);
+		$posts = Post::orderBy('id', 'desc')->get()->except($featuredPostsId);
 		return view('pages.frontend.home', compact('featuredPosts', 'posts'));
 	}
 }

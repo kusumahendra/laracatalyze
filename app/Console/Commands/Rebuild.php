@@ -11,7 +11,7 @@ class Rebuild extends Command
      *
      * @var string
      */
-    protected $signature = 'madewow:rebuild {--F|force : Force the operation to run without confirmation.}';
+    protected $signature = 'lara:rebuild {--F|force : Force the operation to run without confirmation.}';
 
     /**
      * The console command description.
@@ -48,7 +48,7 @@ class Rebuild extends Command
     }
     public function commandOperations()
     {
-        $this->call('madewow:refresh', ['--force' => true]);
+        $this->call('lara:refresh', ['--force' => true]);
 
         $this->info('[START] Flush the application cache..........');
 

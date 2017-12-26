@@ -33,7 +33,8 @@ class AddPostTagFk extends Migration
     public function down()
     {
         Schema::table('post_tag', function (Blueprint $table) {
-            $table->dropForeign(['post_id','tags_id']);
+            $table->dropForeign(['post_id']);
+            $table->dropForeign(['tag_id']);
         });
     }
 }

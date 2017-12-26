@@ -11,7 +11,7 @@ class RefreshSeed extends Command
      *
      * @var string
      */
-    protected $signature = 'madewow:refresh {--F|force : Force the operation to run without confirmation.}';
+    protected $signature = 'lara:refresh {--F|force : Force the operation to run without confirmation.}';
 
     /**
      * The console command description.

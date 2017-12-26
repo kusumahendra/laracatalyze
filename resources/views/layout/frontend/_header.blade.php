@@ -1,5 +1,5 @@
 <div data-sticky-container>
-	<div id="main-header" class="sticky">
+	<div id="main-header" data-options="marginTop:0;" style="width:100%">
 		<!-- mobile nav bar -->
 		{{-- <div class="title-bar topbar-center-logo-mobile hide" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
 		    <div class="title-bar-left">

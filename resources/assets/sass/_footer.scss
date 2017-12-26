@@ -43,7 +43,9 @@
 		}
 	}
 	@include breakpoint(small only){
+		.cell{
 		margin-bottom: 20px;
 		margin-top: 20px;
+		}
 	}
 }

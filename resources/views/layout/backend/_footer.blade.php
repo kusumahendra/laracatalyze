@@ -3,7 +3,7 @@
         <b>Version</b> 1.0.0
     </div>
 
-    <strong>Copyright &copy; {{ date('Y') }} <a href="#">MadeWow</a>.</strong>
+    <strong>Copyright &copy; {{ date('Y') }} <a href="#">Catalyze</a>.</strong>
 
     All rights reserved.
 </footer>
