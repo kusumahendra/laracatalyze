@@ -1,5 +1,5 @@
 # Catalyze CMS
-Basic CMS to do blogging stuff for Catalyze. Feature including Categories, Tags, and image uploading
+Basic CMS to do blogging stuff for Catalyze. Feature including Categories, Tags, and image upload
 
 ## Built with
 * Laravel Framework
