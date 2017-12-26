@@ -11,7 +11,7 @@ Basic CMS to do blogging stuff for Catalyze. Feature including Categories, Tags,
 1. Clone this repository to your web server directory
 2. Prepare your database detail and create new database
 3. rename file .env.example to .env
-4. change detail in .enf file according to your DB connection detail
+4. change detail in .env file according to your DB connection detail
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -25,7 +25,8 @@ DB_PASSWORD=pass
 $ php artisan lara:rebuild
 ```
 6. enter 'y' or 'n' in every question on migrate process (all 'y' is recommended)
-7. your apps is ready to use
+7. create subdomain and point to /public folder
+8. your apps is ready to use on your subdomain
 
 ## Important Notes
 * admin section can be accessed under /admin
