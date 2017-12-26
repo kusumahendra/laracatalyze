@@ -12,9 +12,6 @@
 */
 // Auth::loginUsingId(1);
 
-// Route::get('/', function () {
-//     return view('pages.blank');
-// });
 Route::group(['as' => 'frontend.', 'namespace' => 'Frontend'], function () {
 	Route::get('/', 'PageController@home');
 	Route::get('post/{slug}', 'PostController@show')->name('post');

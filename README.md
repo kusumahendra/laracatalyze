@@ -30,6 +30,10 @@ DB_PASSWORD=pass
 $ php artisan lara:rebuild
 ```
 7. enter 'y' or 'n' in every question on migrate process (all 'y' is recommended)
+8. to enable admin section to fully function go to file: /routes/web.php and un-comment this line
+```
+// Auth::loginUsingId(1);
+```
 8. your apps is ready to use on your subdomain
 
 ## Important Notes
@@ -39,6 +43,7 @@ $ php artisan lara:rebuild
 sudo chgrp -R www-data storage bootstrap/cache
 sudo chmod -R ug+rwx storage bootstrap/cache
 ```
+* this project include some post/catagories and tags, so you dont need to write all post. but if you want to create new post, you can do it on admin section
 * admin section can be accessed under /admin
 * a full sample for post detail can be accessed at /post/lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit-sed-do-eiusmod-tempor
 * CKeditor is used as WYSIWYG editor
